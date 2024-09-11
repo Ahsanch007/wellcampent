@@ -1,0 +1,386 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'MyriadPro', sans-serif;
+    background: #FAF9F9;
+}
+
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('../font/MYRIADPRO-REGULAR.OTF') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'MyriadPro-bold';
+    src: url('../font/MYRIADPRO-BOLD.OTF') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'MyriadPro-light';
+    src: url('../font/MyriadPro-Light.otf') format('opentype');
+
+}
+
+.bold-madrid {
+    font-family: 'MyriadPro-bold';
+
+}
+
+.light-madrid {
+    font-family: 'MyriadPro-light';
+
+}
+
+.menu-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.activee::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+.hrr {
+    border-width: 2px;
+    border-top-style: solid;
+    color: #000 !important;
+    min-height: 2px;
+    border: 0;
+    background: black;
+    display: block;
+    margin: 10px 0;
+}
+
+
+.layout-drawer-hamburger.hamburger-on-header {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+.layout-drawer-hamburger .hamburger__slice {
+    display: block;
+    height: 0;
+    width: 100%;
+    border: 1px solid currentColor;
+    transition: transform .3s ease-out, opacity .4s ease-out;
+    transform-origin: center;
+}
+
+.layout-drawer-hamburger {
+    background: unset;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    margin-left: env(safe-area-inset-left);
+    padding: 13px 9px;
+
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #787878;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    justify-content: space-between;
+    align-items: stretch;
+    top: 10px;
+    transition: color .3s ease-in, background-color .3s ease-in;
+    border-radius: 0;
+}
+
+.layout-drawer-hamburger.active .hamburger__slice:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.layout-drawer-hamburger.active .hamburger__slice:nth-child(2) {
+    opacity: 0;
+}
+
+.layout-drawer-hamburger.active .hamburger__slice:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+.mobile-menu.open {
+    top: 0;
+    /* Moves the menu to the visible part of the screen */
+}
+
+.layout-drawer-hamburger {
+    z-index: 100;
+    /* Ensure it's above the mobile menu */
+}
+
+.mobile-menu {
+    z-index: 99;
+    /* Keep this as is */
+}
+
+.hrr2 {
+    color: rgba(0, 0, 0, 1);
+    /* background:black ; */
+    display: block;
+    margin: 10px 0;
+    height: 2px;
+    border: 1px solid black;
+}
+
+
+.contact-content {
+    padding: 10px 0px;
+}
+
+.contact-content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-top: 8px;
+}
+
+.contact-content a {
+    color: black;
+    padding-top: 8px;
+    transition: .3s;
+
+}
+
+.contact-content a:hover {
+    color: #000000b3;
+}
+
+.contact-content a span {
+
+    padding: 16px 0px;
+}
+
+.contact-content a span {
+    color: #7a212e !important;
+    transition: .3s;
+}
+
+.contact-content a span:hover {
+    opacity: .7;
+}
+
+
+
+.wellcamp-content {
+    padding: 2px 0px;
+    max-width: 1188px;
+    margin: 8px auto;
+    width: 100%;
+}
+
+.wellcamp-content h1 {
+    font-size: 32px;
+    font-family: 'MyriadPro-bold';
+    margin: 10px 0px;
+    color: black;
+}
+
+
+.accordion-content {
+    padding: 18px 20px;
+    transition: height 0.3s ease;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.delivering-content {
+    margin: 8px 0px;
+    padding: 2px 0px;
+}
+
+.delivering-content h3 {
+    color: white;
+    font-size: 26px;
+    font-family: 'MyriadPro-bold';
+    margin: 10px 0px;
+    font-weight: bold;
+
+}
+
+.delivering-content ul {
+    padding-left: 40px;
+    color: white;
+    list-style-type: disc;
+}
+
+.delivering-content ul li {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.feature {
+    padding: 2px 0px;
+    margin: 8px 0px;
+}
+
+.feature h3 {
+    font-size: 26px;
+    font-family: 'MyriadPro-bold';
+    margin: 10px 0px;
+    text-transform: uppercase;
+}
+
+
+.feature ul {
+    padding-left: 35px;
+    list-style-type: disc;
+}
+
+
+
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0) !important;
+    display: block;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 670px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.arrows {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 2;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.arrows i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.arrows i:hover {
+    color: #ffffffcc;
+}
+
+@media (min-width: 1024px) {
+    .slider:hover .arrows {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1023px) {
+    .arrows {
+        opacity: 1;
+    }
+
+    .slider {
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+        height: 200px;
+    }
+    .delivering-content h3 {
+        color: white;
+        font-size: 21px;
+        font-family: 'MyriadPro-bold';
+        margin: 10px 0px;
+        font-weight: bold;
+    
+    }
+    .delivering-content ul {
+        padding-left: 30px;
+        color: white;
+        list-style-type: disc;
+    }
+}
+
+@media (max-width: 800px) {
+    .arrows {
+        opacity: 1;
+    }
+
+    .slider {
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+        height: 200px;
+    }
+    .delivering-content h3 {
+        color: white;
+        font-size: 21px;
+        font-family: 'MyriadPro-bold';
+        margin: 10px 0px;
+        font-weight: bold;
+    
+    }
+    .delivering-content ul {
+        padding-left: 30px;
+        color: white;
+        list-style-type: disc;
+    }
+    .wellcamp-content h1 {
+        font-size: 26px;
+        font-family: 'MyriadPro-bold';
+        margin: 10px 0px;
+        color: black;
+        line-height: normal;
+    }
+    
+}
+
+
+@media(min-width:778px) {
+    .bordder {
+        border-bottom: 2px solid black;
+    }
+}
